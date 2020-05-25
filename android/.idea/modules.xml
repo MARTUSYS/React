@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ReactMyApp.iml" filepath="$PROJECT_DIR$/ReactMyApp.iml" group="ReactMyApp" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ReactMyApp/app" />
+    </modules>
+  </component>
+</project>
