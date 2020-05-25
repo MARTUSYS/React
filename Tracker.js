@@ -29,8 +29,6 @@ class Tracker extends Component{
     if (cd === undefined) {
       cd = 'Russsia';
     }
-
-
     return (
       <View style={styles.container}>
         <Text>Information on {cd} {'\n'}</Text>
@@ -48,7 +46,7 @@ class Tracker extends Component{
       </View>
     ); // {item, index}
   }
-} //               {item[1]}: Inf now = {item[0].total_cases - item[0].total_deaths}, Total cases = {item[0].total_cases}, Total deaths = {item[0].total_deaths}
+}
 
 
 const styles = StyleSheet.create({

@@ -4,18 +4,11 @@ import {
   View,
   Text,
   Button,
-  FlatList,
-  Dimensions,
-  ScrollView, TouchableHighlight
+  ScrollView,
 } from 'react-native';
 
 import {
   LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart
 } from "react-native-chart-kit";
 import Tracker from "./Tracker";
 import ModalDropdown from 'react-native-modal-dropdown';
@@ -29,7 +22,6 @@ class Diagram extends Component{
     search: '',
     dropdown: '',
     country_json: null,
-    // counrty_code: [],
     counrty_name: [],
     flag: true,
     country_map: {},
@@ -39,7 +31,6 @@ class Diagram extends Component{
   updateDropdown = dropdown => {
     this.setState({ dropdown });
     this.getData(this.state.counrty_name[dropdown]);
-    // console.log(dropdown);
   };
 
   componentDidMount() {
@@ -56,7 +47,6 @@ class Diagram extends Component{
       console.log('Data');
     } catch (error) {
       alert('Enter the country code correctly');
-      // alert('Failed with ' + error.message);
     }
   }
 
@@ -68,27 +58,13 @@ class Diagram extends Component{
       this.setState({name_now: country});
     } catch (error) {
       alert('Sorry \nNo data for this country.');
-      // alert('Failed with ' + error.message);
     }
   }
-
-  // renderRow (rowData, rowID, highlighted) {
-  //   return (
-  //     <TouchableHighlight underlayColor='#36baac'>
-  //       <View >
-  //         <Text style={styles.textDropdown} numberOfLines={1} ellipsizeMode={'tail'}>
-  //           {rowData}
-  //         </Text>
-  //       </View>
-  //     </TouchableHighlight>
-  //   )
-  // }
 
   render() {
     console.log('render');
     const { dropdown } = this.state;
 
-    // const { search } = this.state;
     var t_cases = '-';
     var t_deaths = '-';
     var t_recoveries = '-';
@@ -97,7 +73,6 @@ class Diagram extends Component{
     var total_cases = [];
     var total_deaths = [];
     var flatData = [];
-    var total_recoveries = [];
 
     var counrty_code = [];
 
@@ -160,9 +135,7 @@ class Diagram extends Component{
       total_deaths = [0];
       flatData = [[{total_cases: 0, total_deaths: 0, total_recoveries: 0}, '1/01/20']]
     }
-    // if (flatData === undefined) {
-    //   flatData = [[{total_cases: 0, total_deaths: 0, total_recoveries: 0}, '1/01/20']]
-    // }
+
     if (flatData[0][1] === '1/01/20') {
       flatData.reverse()
       t_cases = flatData[0][0].total_cases;
@@ -184,9 +157,7 @@ class Diagram extends Component{
               options={this.state.counrty_name}
               defaultValue={this.state.name_now}
               defaultIndex={183}
-              // style={styles.text}
               textStyle={styles.text}
-              // renderRow={this.renderRow={this.renderRow.bind(this)}.bind(this)}
               onSelect={this.updateDropdown}
             />
           </View>
@@ -292,13 +263,9 @@ const styles = StyleSheet.create({
   },
   container_Dropdown: {
     fontSize: 30,
-    // width: 40,
   },
   text_2: {
     fontSize: 15,
-    // textAlign: 'center',
-    // backgroundColor: '#d5cece',
-    // color: '#f88484',
   },
 });
 

@@ -1,4 +1,4 @@
-#Thu May 21 16:20:57 VLAT 2020
+#Mon May 25 15:32:45 VLAT 2020
 base.0=F\:\\FEFU\\React\\ReactMyApp\\android\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
