@@ -119,6 +119,14 @@ class Diagram extends Component{
       var day_t = '01';
       var day = 1;
 
+      var today = new Date();
+
+      if (keys[0] === 'stat') {
+
+        keys[0] = (today.getMonth() + 1) + '/' + today.getDate() + '/' + '20';
+        this.state.json[(today.getMonth() + 1) + '/' + today.getDate() + '/' + '20'] = {total_cases: 0, total_deaths: 0, total_recoveries: 0};
+      }
+
       while (month + '/' + day_t + '/20' !== keys[0]) {
         total_cases.push(0);
         total_deaths.push(0);
