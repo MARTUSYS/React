@@ -1,0 +1,4 @@
+#Tue May 26 18:57:22 VLAT 2020
+base.0=F\:\\FEFU\\React\\ReactMyApp\\android\\app\\build\\intermediates\\dex\\release\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
